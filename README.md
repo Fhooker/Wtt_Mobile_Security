@@ -7,6 +7,10 @@
 ---
 
 # 1.安卓逆向系列文章
+## 面试
+- [01.安卓逆向面试 技术篇 相关资料](audition/code)
+
+
 ## frida相关
 - [01.frida 延时hook的3种方法](frida/01/README.md)
 - [02.frida 打印堆栈 java层和c层 (修复优化版本)](frida/02/README.md)
