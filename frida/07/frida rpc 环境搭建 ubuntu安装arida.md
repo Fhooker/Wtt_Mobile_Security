@@ -25,8 +25,8 @@ arida是一个好用的用于frida rpc的项目
 4. 创建conda环境 安装arida需要的python支持库
 5. 安装arida环境需要的nodejs相关支持库
 
-#ubuntu安装 arida
-##1.ubuntu安装conda虚拟环境  
+# ubuntu安装 arida
+## 1.ubuntu安装conda虚拟环境  
 这里为啥要安装conda?
 这里可以把conda理解成一个虚拟机一样的东西，是一个虚拟环境，在里面安装软件后，是这个环境所私有的，对主机环境和别的虚拟环境没有影响。
 
@@ -85,7 +85,7 @@ conda config --set auto_activate_base false
 
 ![conda ubutnu](https://upload-images.jianshu.io/upload_images/25193798-093eff30903d8d1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 2) 配置conda 软件源
+## 2. 配置conda 软件源
 
 这里的专业术语是 channels  意思是频道，其实通俗点讲就是下载软件的网址，我这里直接叫软件源
 这里设置成北京外国语学院的软件源  因为用清华源的人实在是太多了  让那些用清华源的内卷去吧 我们猥琐发育就可
@@ -97,7 +97,7 @@ conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/conda-for
 conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/main/
 ```
-##3. 下载arida相关代码
+## 3. 下载arida相关代码
 ![image.png](https://upload-images.jianshu.io/upload_images/25193798-482cdff7ffadccd1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 自己选一个目录  把arida目录下载下来
 我这里直接用 git clone
@@ -111,7 +111,7 @@ git clone --depth=1 https://github.com/lateautumn4lin/arida.git
 上面的语句表示浅复制  只下载代码最新的版本 之前的版本一概不管
 ![image.png](https://upload-images.jianshu.io/upload_images/25193798-6bbf3277e9429979.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 好了 成功下载
-##4.创建conda环境 安装arida需要的python支持库
+## 4.创建conda环境 安装arida需要的python支持库
 这里要先创建一个虚拟环境，然后在虚拟环境里安装相关库
 创建虚拟环境的命令格式是
 ```shell
@@ -179,7 +179,7 @@ conda install --yes --file install.txt
 pip install -r pipinstall.txt
 ![image.png](https://upload-images.jianshu.io/upload_images/25193798-fcc7b47cdf50b2f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
- ##5. 安装arida环境需要的nodejs相关支持库
+ ## 5. 安装arida环境需要的nodejs相关支持库
 arida执行需要nodejs的环境  所以这里要安装nodejs 和 npm
 安装命令
 ```

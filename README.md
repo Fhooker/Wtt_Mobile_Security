@@ -10,7 +10,7 @@
 ## frida相关
 - [01.frida 延时hook的3种方法](frida/01/README.md)
 - [02.frida 打印堆栈 java层和c层 (修复优化版本)](frida/02/README.md)
-- [03.frida hook AES DES RSA 自吐算法](frida/01/README.md)
+- [03.frida hook AES DES RSA 自吐算法](frida/03/README.md)
 - [05.frida hook native  frida hook so层 实例代码](frida/05/README.md)
 - [06.frida 远程连接手机 frida局域网连接 远程注入](frida/06/README.md)
 - [07.frida rpc远程调用 内网穿透](frida/07/README.md)

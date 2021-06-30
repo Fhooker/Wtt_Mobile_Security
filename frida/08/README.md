@@ -6,7 +6,7 @@
 大家好，我是王铁头 一个乙方安全公司搬砖的菜鸡
 持续更新移动安全，iot安全，编译原理相关原创视频文章
 
-#frida主动调用方法分类
+# frida主动调用方法分类
 frida主动调用分为下面几种情况
 1. frida 主动调用java类方法 （静态java方法）
 2. frida 主动调用native类方法 (静态native方法）
@@ -26,7 +26,8 @@ frida主动调用分为下面几种情况
 2. 自己 创建（new）一个
 
 好 下面演示一下5种方式的具体调用代码
-##1. frida主动调用类方法(java静态方法)代码
+
+## 1. frida主动调用类方法(java静态方法)代码
 要调用的函数声明如下
 ```Java
 public static String enc(String str_data, int n_conunt)
@@ -62,7 +63,7 @@ function call_enc(str_data, n_cnt)
   return str_ret;
 }
 ```
-##2. frida 主动调用native类方法 (静态native方法）代码
+## 2. frida 主动调用native类方法 (静态native方法）代码
 要调用的函数声明如下
 ```Java
 public static native String c_enc(String str_data)
@@ -100,7 +101,7 @@ function call_c_enc(str_data)
   return str_ret;
 }
 ```
-##3.frida 主动调用对象的java方法
+## 3.frida 主动调用对象的java方法
 要调用的函数声明如下
 ```Java
 public  String enc(String str_data)
@@ -128,7 +129,7 @@ public  String enc(String str_data)
 2.类名引用.方法名（参数，...） //新创建的对象
 ```
 
-###1) 直接获取内存中对象主动调用
+### 1) 直接获取内存中对象主动调用
 这里介绍一个frida的api 
 ```JavaScript
       //从内存中（堆）直接搜索已存在的对象
@@ -173,7 +174,7 @@ function call_enc(str_data)
   return str_ret;
 }
 ```
-###2) 创建一个新对象 主动调用代码
+### 2) 创建一个新对象 主动调用代码
 这里要用frida创建对象的语法 $new()
 ```JavaScript
  //获取类的引用
@@ -211,7 +212,7 @@ function call_enc(str_data)
   return str_ret;
 }
 ```
-##4.frida 主动调用对象的native方法
+## 4.frida 主动调用对象的native方法
 要调用的函数声明如下
 ```Java
 public native String enc(String str_data, int n_num)
@@ -282,7 +283,7 @@ function call_enc(str_data, n_num)
 }
 ```
 
-##5 frida 主动调用so方法
+## 5 frida 主动调用so方法
 so层函数声明
 ```c++
 char* c_enc_2(char* p_str_data,  int n_num)
@@ -293,11 +294,15 @@ char* c_enc_2(char* p_str_data,  int n_num)
 NativeFunction(address, returnType, argTypes[, abi])
 ```
 1）address：要hook的函数地址
+
 2）returnType：返回值类型
+
 3）argTypes[, abi]: 参数类型 这里参数可以是多个
 
  frida NativeFunction支持的类型
+ 
 ![image.png](https://upload-images.jianshu.io/upload_images/25193798-7ef326e051b2bd94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ 
  这里参数有两个 一个是 char* 一个是int
 大家可以看上面的图 NativeFunction是支持int这个类型的
 
