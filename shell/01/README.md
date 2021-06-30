@@ -50,7 +50,9 @@ com.example.test_shell
 ```
 2）第二步：启动app
 这里测试机已经安装了测试app 点击图标启动
+
 ![image.png](https://upload-images.jianshu.io/upload_images/25193798-098073ee5a2f341a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 3）第三步：进入脱出dex的目录 一般为 /data/data/包名/unpacker/dex 获取脱壳后的dex
 
